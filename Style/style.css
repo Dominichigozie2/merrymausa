@@ -14,7 +14,7 @@
     user-select: none;
     list-style: none;
     text-decoration: none;
-    behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 /* swiper js sttyling */
@@ -193,12 +193,6 @@ nav{
     display: flex;
     gap: 5rem;
     padding: 0 1rem;
-    & > li:hover,
-    & > .active{
-        & a{
-            color: #ffc123;
-        }
-    }
     & > li{
         font-size: 1rem;
         & a{
@@ -210,6 +204,12 @@ nav{
         & .color{
             color: var(--sec-col);
         }
+        & .active{
+            color:#ffc123;    
+        }
+    }
+    & > li:hover a{
+        color:#ffc123;
     }
 }
 /* nav ends here */
@@ -406,7 +406,7 @@ nav{
     & .about-image{
         transform: rotateY(180deg);
         & img{
-            width: 60rem;
+            width: 40rem;
             transform: translateY(1rem);
         }
     }
@@ -424,7 +424,7 @@ nav{
     }
     & h1{
         font-size: 5rem;
-        line-height: 60PX;
+        line-height: 90px;
         color: var(--primary-col);
         padding-bottom: 2rem;
     }
@@ -470,7 +470,6 @@ nav{
 }
  .event-container{
   display: flex;
-
   flex-direction: column;
   gap: 1rem;
   /* background: red; */
@@ -1067,5 +1066,22 @@ nav{
                  }
              }
      }
-     
+     .about-content{
+        & h2{
+            font-size: 1.2rem;
+        }
+        & h1{
+            font-size: 2.5rem;
+            line-height: 40px;
+        }
+     }
+     .event-container{
+        & h1{
+            font-size: 2.5rem;
+            margin-bottom: 0;
+        }
+        & h2{
+            font-size: 1.2rem;
+        }
+     }
 }

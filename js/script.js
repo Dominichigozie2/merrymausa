@@ -19,7 +19,7 @@ const sectionOneObserver = new IntersectionObserver(function(entries, sectionOne
             secondLogo.style.display="initial";
                 navLi.forEach(function(item) {
                 item.classList.add("color");
-                console.log(item);
+
             });
 
         }else{
@@ -46,3 +46,29 @@ bar.addEventListener("click", ()=>{
     bar.classList.toggle("fa-times")
 })
 
+
+
+
+
+// the nav animations
+
+let sections = document.querySelectorAll("section")
+let navLinks = document.querySelectorAll(".list-group li a")
+
+window.onscroll = () =>{
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 200;
+        let height = sec.offsetHeight;
+
+        let id = sec.getAttribute("id");
+
+        if(top >= offset && top < offset + height){
+            navLinks.forEach(lin =>{
+                console.log(lin);
+                lin.classList.remove("active");
+                document.querySelector(".list-group li a[href*=" + id + "]").classList.add("active");
+            })
+        }
+    });
+}

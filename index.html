@@ -25,11 +25,12 @@
                     <img class="second-logo" src="./photo/mausa.png" alt>
                 </div>
                 <ul class="list-group">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">contact us</a></li>
+                    <li><a  class="active" href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#event">Events</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#review">Revies</a></li>
+                    <li><a href="#contact">contact us</a></li>
                 </ul>
                 <div class="bar">
                     <i class="fa-solid fa-bars-staggered fa-beat"></i>
@@ -64,7 +65,7 @@
         
         
         
-        <div class="home">
+        <section class="home" id="home">
             <div class="home-container container">
                 <div class="col-1">
                     <h3>Welcome <span>to</span></h3>
@@ -79,9 +80,9 @@
                 </div>
             </div>
             <div class="home-cover"></div>
-        </div>
+        </section>
 
-        <div class="about">
+        <section class="about" id="about">
             <div class="container-none">
                 <div class="about-container">
                     <div class="about-image">
@@ -103,9 +104,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="event">
+        <section class="event" id="event">
             <div class="event-container container">
                 <h2>Let's Look at</h2>
                 <h1>Fruitfull <span> events</span></h1>
@@ -187,9 +188,9 @@
                     </swiper-slide>
                 </swiper-container>
             </div>
-        </div>
+        </section>
 
-        <div class="photos">
+        <section class="photos" id="gallery">
             <div class="photos-container container ">
                 <h1>gallery</h1>
                 <swiper-container class="photo-row mySwiper" init="false">
@@ -255,8 +256,8 @@
                     </swiper-slide>
                 </swiper-container>
             </div>
-        </div>
-        <div class="reviews">
+        </section>-
+        <section class="reviews" id="review">
             <div class="review-container container">
                 <h1>Review</h1>
                 <swiper-container class="review-card-container mySwiper" init="false">
@@ -338,8 +339,8 @@
                     </swiper-slide>
                 </swiper-container>
             </div>
-        </div>
-        <div class="contact">
+        </section>
+        <section class="contact" id="contact">
             <div class="contact-cover"></div>
             <div class="contact-container container">
                 <div class="contact-header">
@@ -372,7 +373,7 @@
                 </form>
             </div>
             </div>
-        </div>
+        </section>
 
         <!-- swiper js  -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
@@ -452,7 +453,7 @@
               },
             });
             swiperEl3.initialize();
-          </script>
+        </script>
         <!-- swiper js  -->
 
         <script src="./js/script.js"></script>
