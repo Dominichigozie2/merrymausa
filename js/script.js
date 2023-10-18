@@ -54,6 +54,7 @@ bar.addEventListener("click", ()=>{
 
 let sections = document.querySelectorAll("section")
 let navLinks = document.querySelectorAll(".list-group li a")
+let sideLinks = document.querySelectorAll(".side-group li a")
 
 window.onscroll = () =>{
     sections.forEach(sec => {
@@ -69,6 +70,11 @@ window.onscroll = () =>{
                 lin.classList.remove("active");
                 document.querySelector(".list-group li a[href*=" + id + "]").classList.add("active");
             })
+            sideLinks.forEach(side =>{
+                side.classList.remove("active");
+                document.querySelector(".side-group li a[href*=" + id + "]").classList.add("active");
+            })
         }
     });
 }
+
