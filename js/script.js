@@ -66,7 +66,7 @@ window.onscroll = () =>{
 
         if(top >= offset && top < offset + height){
             navLinks.forEach(lin =>{
-                console.log(lin);
+                // console.log(lin);
                 lin.classList.remove("active");
                 document.querySelector(".list-group li a[href*=" + id + "]").classList.add("active");
             })
@@ -77,4 +77,89 @@ window.onscroll = () =>{
         }
     });
 }
+
+
+
+
+
+
+// the image modal contents
+const eventCards = document.querySelectorAll('.event-btn');
+
+eventCards.forEach(card => {
+  card.addEventListener('click', () => {
+    const clickedImage = document.querySelector('.event-image img');
+    const imageUrl = clickedImage.src;
+    const imageAlt = clickedImage.alt;
+  
+
+    
+
+    // Create a modal element
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+  
+    // Dynamically generate modal content
+    const modalContent = `
+      <div class="modal-content">
+        <img src="${imageUrl}" alt="${imageAlt}" class="modal-image">
+        <div class="modal-content">
+            <h1 class="modalContent"></h1>
+        </div>
+      </div>
+    `;
+    modal.innerHTML = modalContent;
+
+    // Append the modal to the body
+    document.body.appendChild(modal);
+
+    // Add click event listener to close the modal
+    modal.addEventListener('click', () => {
+      modal.remove();
+    });
+  });
+});
+
+
+
+
+
+
+
+
+// the image modal contents
+const galleryCards = document.querySelectorAll('.pictures');
+
+galleryCards.forEach(card => {
+  card.addEventListener('click', () => {
+    const clickedImage = card.querySelector('.pictures img');
+    const imageUrl = clickedImage.src;
+    const imageAlt = clickedImage.alt;
+
+    
+
+    // Create a modal element
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+  
+    // Dynamically generate modal content
+    const modalContent = `
+      <div class="modal-content">
+        <img src="${imageUrl}" alt="${imageAlt}" class="modal-image">
+        <div class="modal-content">
+            <h1></h1>
+        </div>
+      </div>
+    `;
+    modal.innerHTML = modalContent;
+
+    // Append the modal to the body
+    document.body.appendChild(modal);
+
+    // Add click event listener to close the modal
+    modal.addEventListener('click', () => {
+      modal.remove();
+    });
+  });
+});
 
